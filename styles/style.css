@@ -1,0 +1,117 @@
+/* header styles */
+.container {
+    width: 1220px;
+    margin:0 auto;
+}
+.d-flex {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.navigation-block {
+    display: flex;
+    align-items: center;
+}
+.consulting {
+    width: 184px;
+    height: 65px;
+    background-color: #6B77E5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#fff;
+}
+.ul-item {
+    display: flex;
+}
+.position-fixed {
+    position: fixed;
+    top:0;
+    left:0;
+    width: 100%;
+    padding-top: 53px;
+    z-index: 100;
+    background-color: #fff;
+}
+
+/* section#1 */
+.image-banner {
+    width: 100%;
+}
+.text-block {
+    width: 511px;
+    background-color: lightcoral;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    text-align: center;
+}
+.image-wraper {
+    position: relative;
+}
+
+/* section#2 */
+.parent-block {
+    width: 500px;
+    height: 500px;
+    background-color: yellow;
+    position: relative;
+    /* transition-property: all;
+    transition-duration: 7s;
+    transition-timing-function: linear;   */
+    transition: all 7s linear;
+}
+.child-block {
+    width: 150px;
+    height: 150px;
+    background-color: blue;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(45deg);
+    transition:all 5s;
+}
+
+/* hover effect */
+.parent-block:hover {
+    background-color: red;
+   
+}
+.child-block:hover {
+    background-color: lightseagreen;
+    transform: translate(-50%,-50%) rotate(0deg);  
+}
+/* .parent-block:hover .child-block {
+    background-color: pink;
+} */
+
+
+
+/* car animation */
+.car-animation {
+    /* position: relative; */
+    height: 150px;
+}
+.car-image {
+    height: 100px;
+    /* animation-name: carmove;
+    animation-duration: 5s;
+    animation-iteration-count: infinite;
+    animation-delay: 2s;
+    animation-timing-function: ease-out;
+    animation-direction: alternate; */
+    animation: carmove2 5s alternate ease-out infinite 2s;
+    /* position: absolute; */
+}
+
+/* keyframes */
+/* @keyframes carmove {
+    from {left:0;}
+    to {left:80%;}
+} */
+
+@keyframes carmove2 {
+    from {transform: translateX(0);}
+    to{transform: translateX(800px);}
+}
